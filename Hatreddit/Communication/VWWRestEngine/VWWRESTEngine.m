@@ -132,7 +132,7 @@ typedef void (^PSESuccessBlock)(id responseJSON);
                                                  httpMethod:kHTTPTRequstTypePost
                                                         ssl:self.secure];
     
-    [operation setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
+//    [operation setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
     
     [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
 #if defined(SM_LOG_CURL_COMMANDS)
@@ -160,7 +160,7 @@ typedef void (^PSESuccessBlock)(id responseJSON);
                                                      params:jsonDictionary
                                                  httpMethod:kHTTPTRequstTypePut
                                                         ssl:self.secure];
-    [operation setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
+//    [operation setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
     
     [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
 #if defined(SM_LOG_CURL_COMMANDS)
