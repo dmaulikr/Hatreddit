@@ -9,6 +9,12 @@
 #import "VWWRESTParser.h"
 #import "VWWRedditAbout.h"
 #import "VWWRedditUserData.h"
+#import "VWWRedditData.h"
+#import "VWWRedditErrors.h"
+#import "VWWRedditLogin.h"
+
+
+@implementation VWWRESTParser
 
 //data =     {
 //    "comment_karma" = 2041;
@@ -26,10 +32,6 @@
 //    "over_18" = 1;
 //};
 //kind = t2;
-
-@implementation VWWRESTParser
-
-
 +(BOOL)parseJSON:(NSDictionary*)json about:(VWWRedditAbout**)about{
     if(json == nil){
         return NO;
@@ -48,6 +50,31 @@
     
     return YES;
 }
+
+
+//{
+//    json =     {
+//        data =         {
+//            cookie = "12394811,2013-04-20T22:42:57,308080f8dcea3b13ae6e3db21e487e4ce8d9a23b";
+//            modhash = wl5ch9axap008f603fb3d014324c87422e178156207069c7c5;
+//        };
+//        errors =         (
+//        );
+//    };
+//}
++(BOOL)parseJSON:(id)json data:(VWWRedditLogin**)login{
+
+    NSDictionary *jsonDictionary = json[@"json"];
+    NSDictionary *dataDictionary = jsonDictionary[@"data"];
+    NSDictionary *errorsDictionary = jsonDictionary[@"errors"];
+    
+    (*login).data = [VWWRedditData dataWithDictionary:dataDictionary];
+    (*login).errors = [VWWRedditErrors errorsWithDictionary:errorsDictionary];
+    
+    
+    return YES;
+}
+
 
 
 

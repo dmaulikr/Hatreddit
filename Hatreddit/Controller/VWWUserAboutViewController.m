@@ -9,6 +9,7 @@
 #import "VWWUserAboutViewController.h"
 #import "VWWRESTEngine.h"
 #import "VWWRedditAbout.h"
+#import "VWWRedditLogin.h"
 
 @interface VWWUserAboutViewController ()
 @property (strong) IBOutlet NSTextField *nameLabel;
@@ -75,11 +76,16 @@
     VWWHTTPRedditLoginForm *form = [VWWHTTPRedditLoginForm new];
 //    form.username = @"sneeden";
 //    form.password = @"jfy45h1";
-    form.user = @"sneeden";
+//    form.user = @"sneeden";
+//    form.passwd = @"jfy45h1";
+    form.user = @"hydrocodone_asap";
     form.passwd = @"jfy45h1";
     
     [[VWWRESTEngine privateInstance] loginWithForm:form
-                                  completionBlock:^(NSString *string) {
+                                  completionBlock:^(VWWRedditLogin *login) {
+                                      if(login.errors){
+                                          
+                                      }
                                       NSLog(@"");
                                   } errorBlock:^(NSError *error, NSString *additionalInfo) {
                                       

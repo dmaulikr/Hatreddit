@@ -20,25 +20,28 @@
 		C654974C172377C800B8756B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6549749172377C800B8756B /* CFNetwork.framework */; };
 		C654974D172377C800B8756B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C654974A172377C800B8756B /* Security.framework */; };
 		C654974E172377C800B8756B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C654974B172377C800B8756B /* SystemConfiguration.framework */; };
-		C654976D1723783800B8756B /* NSAlert+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C65497531723783800B8756B /* NSAlert+MKNetworkKitAdditions.m */; };
-		C654976E1723783800B8756B /* NSData+MKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = C65497551723783800B8756B /* NSData+MKBase64.m */; };
-		C654976F1723783800B8756B /* NSDate+RFC1123.m in Sources */ = {isa = PBXBuildFile; fileRef = C65497571723783800B8756B /* NSDate+RFC1123.m */; };
-		C65497701723783800B8756B /* NSDictionary+RequestEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C65497591723783800B8756B /* NSDictionary+RequestEncoding.m */; };
-		C65497711723783800B8756B /* NSString+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C654975B1723783800B8756B /* NSString+MKNetworkKitAdditions.m */; };
-		C65497721723783800B8756B /* UIAlertView+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C654975D1723783800B8756B /* UIAlertView+MKNetworkKitAdditions.m */; };
-		C65497731723783800B8756B /* MKNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C654975F1723783800B8756B /* MKNetworkEngine.m */; };
-		C65497741723783800B8756B /* MKNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C65497621723783800B8756B /* MKNetworkOperation.m */; };
-		C65497751723783800B8756B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C65497651723783800B8756B /* Reachability.m */; };
-		C654977B1723786A00B8756B /* VWWRESTEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C654977A1723786A00B8756B /* VWWRESTEngine.m */; };
-		C654978117237A3900B8756B /* VWWRESTConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C654977E17237A3900B8756B /* VWWRESTConfig.m */; };
-		C654978517237EE900B8756B /* VWWRESTParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C654978417237EE900B8756B /* VWWRESTParser.m */; };
 		C6549790172386A100B8756B /* VWWUserAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C654978E172386A000B8756B /* VWWUserAboutViewController.m */; };
 		C6549791172386A100B8756B /* VWWUserAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C654978F172386A000B8756B /* VWWUserAboutViewController.xib */; };
-		C6549797172386BA00B8756B /* VWWRedditAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = C6549794172386BA00B8756B /* VWWRedditAbout.m */; };
-		C6549798172386BA00B8756B /* VWWRedditUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = C6549796172386BA00B8756B /* VWWRedditUserData.m */; };
 		C65497A4172394B700B8756B /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = C65497A3172394B700B8756B /* icon.icns */; };
-		C65497B11723977800B8756B /* VWWHTTPRedditForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C65497AD1723977800B8756B /* VWWHTTPRedditForm.m */; };
-		C65497B21723977800B8756B /* VWWHTTPRedditLoginForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C65497B01723977800B8756B /* VWWHTTPRedditLoginForm.m */; };
+		C65498311723B0A900B8756B /* NSAlert+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C654980D1723B0A900B8756B /* NSAlert+MKNetworkKitAdditions.m */; };
+		C65498321723B0A900B8756B /* NSData+MKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = C654980F1723B0A900B8756B /* NSData+MKBase64.m */; };
+		C65498331723B0A900B8756B /* NSDate+RFC1123.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498111723B0A900B8756B /* NSDate+RFC1123.m */; };
+		C65498341723B0A900B8756B /* NSDictionary+RequestEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498131723B0A900B8756B /* NSDictionary+RequestEncoding.m */; };
+		C65498351723B0A900B8756B /* NSString+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498151723B0A900B8756B /* NSString+MKNetworkKitAdditions.m */; };
+		C65498361723B0A900B8756B /* UIAlertView+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498171723B0A900B8756B /* UIAlertView+MKNetworkKitAdditions.m */; };
+		C65498371723B0A900B8756B /* MKNetworkEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498191723B0A900B8756B /* MKNetworkEngine.m */; };
+		C65498381723B0A900B8756B /* MKNetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C654981C1723B0A900B8756B /* MKNetworkOperation.m */; };
+		C65498391723B0A900B8756B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C654981F1723B0A900B8756B /* Reachability.m */; };
+		C654983A1723B0A900B8756B /* VWWHTTPRedditForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498231723B0A900B8756B /* VWWHTTPRedditForm.m */; };
+		C654983B1723B0A900B8756B /* VWWHTTPRedditLoginForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498251723B0A900B8756B /* VWWHTTPRedditLoginForm.m */; };
+		C654983C1723B0A900B8756B /* VWWRedditAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498281723B0A900B8756B /* VWWRedditAbout.m */; };
+		C654983D1723B0A900B8756B /* VWWRedditUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = C654982A1723B0A900B8756B /* VWWRedditUserData.m */; };
+		C654983E1723B0A900B8756B /* VWWRESTConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = C654982C1723B0A900B8756B /* VWWRESTConfig.m */; };
+		C654983F1723B0A900B8756B /* VWWRESTEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C654982E1723B0A900B8756B /* VWWRESTEngine.m */; };
+		C65498401723B0A900B8756B /* VWWRESTParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498301723B0A900B8756B /* VWWRESTParser.m */; };
+		C65498431723B42400B8756B /* VWWRedditLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498421723B42300B8756B /* VWWRedditLogin.m */; };
+		C65498461723B45300B8756B /* VWWRedditData.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498451723B45300B8756B /* VWWRedditData.m */; };
+		C65498491723B46A00B8756B /* VWWRedditErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498481723B46900B8756B /* VWWRedditErrors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,43 +77,49 @@
 		C6549749172377C800B8756B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C654974A172377C800B8756B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C654974B172377C800B8756B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		C65497521723783800B8756B /* NSAlert+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAlert+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
-		C65497531723783800B8756B /* NSAlert+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
-		C65497541723783800B8756B /* NSData+MKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MKBase64.h"; sourceTree = "<group>"; };
-		C65497551723783800B8756B /* NSData+MKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MKBase64.m"; sourceTree = "<group>"; };
-		C65497561723783800B8756B /* NSDate+RFC1123.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RFC1123.h"; sourceTree = "<group>"; };
-		C65497571723783800B8756B /* NSDate+RFC1123.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RFC1123.m"; sourceTree = "<group>"; };
-		C65497581723783800B8756B /* NSDictionary+RequestEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RequestEncoding.h"; sourceTree = "<group>"; };
-		C65497591723783800B8756B /* NSDictionary+RequestEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RequestEncoding.m"; sourceTree = "<group>"; };
-		C654975A1723783800B8756B /* NSString+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
-		C654975B1723783800B8756B /* NSString+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
-		C654975C1723783800B8756B /* UIAlertView+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
-		C654975D1723783800B8756B /* UIAlertView+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
-		C654975E1723783800B8756B /* MKNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkEngine.h; sourceTree = "<group>"; };
-		C654975F1723783800B8756B /* MKNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkEngine.m; sourceTree = "<group>"; };
-		C65497601723783800B8756B /* MKNetworkKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkKit.h; sourceTree = "<group>"; };
-		C65497611723783800B8756B /* MKNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkOperation.h; sourceTree = "<group>"; };
-		C65497621723783800B8756B /* MKNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkOperation.m; sourceTree = "<group>"; };
-		C65497641723783800B8756B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		C65497651723783800B8756B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		C65497791723786A00B8756B /* VWWRESTEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRESTEngine.h; sourceTree = "<group>"; };
-		C654977A1723786A00B8756B /* VWWRESTEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRESTEngine.m; sourceTree = "<group>"; };
-		C654977E17237A3900B8756B /* VWWRESTConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRESTConfig.m; sourceTree = "<group>"; };
-		C654977F17237A3900B8756B /* VWWRESTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRESTConfig.h; sourceTree = "<group>"; };
-		C654978317237EE900B8756B /* VWWRESTParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRESTParser.h; sourceTree = "<group>"; };
-		C654978417237EE900B8756B /* VWWRESTParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRESTParser.m; sourceTree = "<group>"; };
 		C654978D172386A000B8756B /* VWWUserAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VWWUserAboutViewController.h; path = Controller/VWWUserAboutViewController.h; sourceTree = "<group>"; };
 		C654978E172386A000B8756B /* VWWUserAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VWWUserAboutViewController.m; path = Controller/VWWUserAboutViewController.m; sourceTree = "<group>"; };
 		C654978F172386A000B8756B /* VWWUserAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VWWUserAboutViewController.xib; path = Controller/VWWUserAboutViewController.xib; sourceTree = "<group>"; };
-		C6549793172386BA00B8756B /* VWWRedditAbout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRedditAbout.h; sourceTree = "<group>"; };
-		C6549794172386BA00B8756B /* VWWRedditAbout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRedditAbout.m; sourceTree = "<group>"; };
-		C6549795172386BA00B8756B /* VWWRedditUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRedditUserData.h; sourceTree = "<group>"; };
-		C6549796172386BA00B8756B /* VWWRedditUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRedditUserData.m; sourceTree = "<group>"; };
 		C65497A3172394B700B8756B /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
-		C65497AC1723977800B8756B /* VWWHTTPRedditForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWHTTPRedditForm.h; sourceTree = "<group>"; };
-		C65497AD1723977800B8756B /* VWWHTTPRedditForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWHTTPRedditForm.m; sourceTree = "<group>"; };
-		C65497AF1723977800B8756B /* VWWHTTPRedditLoginForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWHTTPRedditLoginForm.h; sourceTree = "<group>"; };
-		C65497B01723977800B8756B /* VWWHTTPRedditLoginForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWHTTPRedditLoginForm.m; sourceTree = "<group>"; };
+		C654980C1723B0A900B8756B /* NSAlert+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAlert+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		C654980D1723B0A900B8756B /* NSAlert+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		C654980E1723B0A900B8756B /* NSData+MKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MKBase64.h"; sourceTree = "<group>"; };
+		C654980F1723B0A900B8756B /* NSData+MKBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MKBase64.m"; sourceTree = "<group>"; };
+		C65498101723B0A900B8756B /* NSDate+RFC1123.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RFC1123.h"; sourceTree = "<group>"; };
+		C65498111723B0A900B8756B /* NSDate+RFC1123.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RFC1123.m"; sourceTree = "<group>"; };
+		C65498121723B0A900B8756B /* NSDictionary+RequestEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RequestEncoding.h"; sourceTree = "<group>"; };
+		C65498131723B0A900B8756B /* NSDictionary+RequestEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RequestEncoding.m"; sourceTree = "<group>"; };
+		C65498141723B0A900B8756B /* NSString+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		C65498151723B0A900B8756B /* NSString+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		C65498161723B0A900B8756B /* UIAlertView+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
+		C65498171723B0A900B8756B /* UIAlertView+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
+		C65498181723B0A900B8756B /* MKNetworkEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkEngine.h; sourceTree = "<group>"; };
+		C65498191723B0A900B8756B /* MKNetworkEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkEngine.m; sourceTree = "<group>"; };
+		C654981A1723B0A900B8756B /* MKNetworkKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkKit.h; sourceTree = "<group>"; };
+		C654981B1723B0A900B8756B /* MKNetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNetworkOperation.h; sourceTree = "<group>"; };
+		C654981C1723B0A900B8756B /* MKNetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNetworkOperation.m; sourceTree = "<group>"; };
+		C654981E1723B0A900B8756B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C654981F1723B0A900B8756B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		C65498221723B0A900B8756B /* VWWHTTPRedditForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWHTTPRedditForm.h; sourceTree = "<group>"; };
+		C65498231723B0A900B8756B /* VWWHTTPRedditForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWHTTPRedditForm.m; sourceTree = "<group>"; };
+		C65498241723B0A900B8756B /* VWWHTTPRedditLoginForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWHTTPRedditLoginForm.h; sourceTree = "<group>"; };
+		C65498251723B0A900B8756B /* VWWHTTPRedditLoginForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWHTTPRedditLoginForm.m; sourceTree = "<group>"; };
+		C65498271723B0A900B8756B /* VWWRedditAbout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRedditAbout.h; sourceTree = "<group>"; };
+		C65498281723B0A900B8756B /* VWWRedditAbout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRedditAbout.m; sourceTree = "<group>"; };
+		C65498291723B0A900B8756B /* VWWRedditUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRedditUserData.h; sourceTree = "<group>"; };
+		C654982A1723B0A900B8756B /* VWWRedditUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRedditUserData.m; sourceTree = "<group>"; };
+		C654982B1723B0A900B8756B /* VWWRESTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRESTConfig.h; sourceTree = "<group>"; };
+		C654982C1723B0A900B8756B /* VWWRESTConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRESTConfig.m; sourceTree = "<group>"; };
+		C654982D1723B0A900B8756B /* VWWRESTEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRESTEngine.h; sourceTree = "<group>"; };
+		C654982E1723B0A900B8756B /* VWWRESTEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRESTEngine.m; sourceTree = "<group>"; };
+		C654982F1723B0A900B8756B /* VWWRESTParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRESTParser.h; sourceTree = "<group>"; };
+		C65498301723B0A900B8756B /* VWWRESTParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRESTParser.m; sourceTree = "<group>"; };
+		C65498411723B42300B8756B /* VWWRedditLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRedditLogin.h; sourceTree = "<group>"; };
+		C65498421723B42300B8756B /* VWWRedditLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRedditLogin.m; sourceTree = "<group>"; };
+		C65498441723B45200B8756B /* VWWRedditData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRedditData.h; sourceTree = "<group>"; };
+		C65498451723B45300B8756B /* VWWRedditData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRedditData.m; sourceTree = "<group>"; };
+		C65498471723B46900B8756B /* VWWRedditErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRedditErrors.h; sourceTree = "<group>"; };
+		C65498481723B46900B8756B /* VWWRedditErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRedditErrors.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,7 +193,6 @@
 			children = (
 				C654979C172392A300B8756B /* Resources */,
 				C65497991723872700B8756B /* Controller */,
-				C6549792172386BA00B8756B /* Model */,
 				C654974F1723783800B8756B /* Communication */,
 				C65496FD1723771900B8756B /* Supporting Files */,
 			);
@@ -225,77 +233,9 @@
 		C654974F1723783800B8756B /* Communication */ = {
 			isa = PBXGroup;
 			children = (
-				C65497501723783800B8756B /* MKNetworkKit */,
-				C65497661723783800B8756B /* VWWRestEngine */,
+				C65498091723B0A900B8756B /* VWWRestEngine */,
 			);
 			path = Communication;
-			sourceTree = "<group>";
-		};
-		C65497501723783800B8756B /* MKNetworkKit */ = {
-			isa = PBXGroup;
-			children = (
-				C65497511723783800B8756B /* Categories */,
-				C65497631723783800B8756B /* Reachability */,
-				C654975E1723783800B8756B /* MKNetworkEngine.h */,
-				C654975F1723783800B8756B /* MKNetworkEngine.m */,
-				C65497601723783800B8756B /* MKNetworkKit.h */,
-				C65497611723783800B8756B /* MKNetworkOperation.h */,
-				C65497621723783800B8756B /* MKNetworkOperation.m */,
-			);
-			path = MKNetworkKit;
-			sourceTree = "<group>";
-		};
-		C65497511723783800B8756B /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				C65497521723783800B8756B /* NSAlert+MKNetworkKitAdditions.h */,
-				C65497531723783800B8756B /* NSAlert+MKNetworkKitAdditions.m */,
-				C65497541723783800B8756B /* NSData+MKBase64.h */,
-				C65497551723783800B8756B /* NSData+MKBase64.m */,
-				C65497561723783800B8756B /* NSDate+RFC1123.h */,
-				C65497571723783800B8756B /* NSDate+RFC1123.m */,
-				C65497581723783800B8756B /* NSDictionary+RequestEncoding.h */,
-				C65497591723783800B8756B /* NSDictionary+RequestEncoding.m */,
-				C654975A1723783800B8756B /* NSString+MKNetworkKitAdditions.h */,
-				C654975B1723783800B8756B /* NSString+MKNetworkKitAdditions.m */,
-				C654975C1723783800B8756B /* UIAlertView+MKNetworkKitAdditions.h */,
-				C654975D1723783800B8756B /* UIAlertView+MKNetworkKitAdditions.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		C65497631723783800B8756B /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				C65497641723783800B8756B /* Reachability.h */,
-				C65497651723783800B8756B /* Reachability.m */,
-			);
-			path = Reachability;
-			sourceTree = "<group>";
-		};
-		C65497661723783800B8756B /* VWWRestEngine */ = {
-			isa = PBXGroup;
-			children = (
-				C654977F17237A3900B8756B /* VWWRESTConfig.h */,
-				C654977E17237A3900B8756B /* VWWRESTConfig.m */,
-				C65497791723786A00B8756B /* VWWRESTEngine.h */,
-				C654977A1723786A00B8756B /* VWWRESTEngine.m */,
-				C654978317237EE900B8756B /* VWWRESTParser.h */,
-				C654978417237EE900B8756B /* VWWRESTParser.m */,
-			);
-			path = VWWRestEngine;
-			sourceTree = "<group>";
-		};
-		C6549792172386BA00B8756B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C65497A6172396FB00B8756B /* http */,
-				C6549793172386BA00B8756B /* VWWRedditAbout.h */,
-				C6549794172386BA00B8756B /* VWWRedditAbout.m */,
-				C6549795172386BA00B8756B /* VWWRedditUserData.h */,
-				C6549796172386BA00B8756B /* VWWRedditUserData.m */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		C65497991723872700B8756B /* Controller */ = {
@@ -335,15 +275,98 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		C65497A6172396FB00B8756B /* http */ = {
+		C65498091723B0A900B8756B /* VWWRestEngine */ = {
 			isa = PBXGroup;
 			children = (
-				C65497AC1723977800B8756B /* VWWHTTPRedditForm.h */,
-				C65497AD1723977800B8756B /* VWWHTTPRedditForm.m */,
-				C65497AF1723977800B8756B /* VWWHTTPRedditLoginForm.h */,
-				C65497B01723977800B8756B /* VWWHTTPRedditLoginForm.m */,
+				C654980A1723B0A900B8756B /* MKNetworkKit */,
+				C65498201723B0A900B8756B /* models */,
+				C654982B1723B0A900B8756B /* VWWRESTConfig.h */,
+				C654982C1723B0A900B8756B /* VWWRESTConfig.m */,
+				C654982D1723B0A900B8756B /* VWWRESTEngine.h */,
+				C654982E1723B0A900B8756B /* VWWRESTEngine.m */,
+				C654982F1723B0A900B8756B /* VWWRESTParser.h */,
+				C65498301723B0A900B8756B /* VWWRESTParser.m */,
 			);
-			path = http;
+			path = VWWRestEngine;
+			sourceTree = "<group>";
+		};
+		C654980A1723B0A900B8756B /* MKNetworkKit */ = {
+			isa = PBXGroup;
+			children = (
+				C654980B1723B0A900B8756B /* Categories */,
+				C65498181723B0A900B8756B /* MKNetworkEngine.h */,
+				C65498191723B0A900B8756B /* MKNetworkEngine.m */,
+				C654981A1723B0A900B8756B /* MKNetworkKit.h */,
+				C654981B1723B0A900B8756B /* MKNetworkOperation.h */,
+				C654981C1723B0A900B8756B /* MKNetworkOperation.m */,
+				C654981D1723B0A900B8756B /* Reachability */,
+			);
+			path = MKNetworkKit;
+			sourceTree = "<group>";
+		};
+		C654980B1723B0A900B8756B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C654980C1723B0A900B8756B /* NSAlert+MKNetworkKitAdditions.h */,
+				C654980D1723B0A900B8756B /* NSAlert+MKNetworkKitAdditions.m */,
+				C654980E1723B0A900B8756B /* NSData+MKBase64.h */,
+				C654980F1723B0A900B8756B /* NSData+MKBase64.m */,
+				C65498101723B0A900B8756B /* NSDate+RFC1123.h */,
+				C65498111723B0A900B8756B /* NSDate+RFC1123.m */,
+				C65498121723B0A900B8756B /* NSDictionary+RequestEncoding.h */,
+				C65498131723B0A900B8756B /* NSDictionary+RequestEncoding.m */,
+				C65498141723B0A900B8756B /* NSString+MKNetworkKitAdditions.h */,
+				C65498151723B0A900B8756B /* NSString+MKNetworkKitAdditions.m */,
+				C65498161723B0A900B8756B /* UIAlertView+MKNetworkKitAdditions.h */,
+				C65498171723B0A900B8756B /* UIAlertView+MKNetworkKitAdditions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		C654981D1723B0A900B8756B /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				C654981E1723B0A900B8756B /* Reachability.h */,
+				C654981F1723B0A900B8756B /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		C65498201723B0A900B8756B /* models */ = {
+			isa = PBXGroup;
+			children = (
+				C65498211723B0A900B8756B /* forms */,
+				C65498261723B0A900B8756B /* json */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		C65498211723B0A900B8756B /* forms */ = {
+			isa = PBXGroup;
+			children = (
+				C65498221723B0A900B8756B /* VWWHTTPRedditForm.h */,
+				C65498231723B0A900B8756B /* VWWHTTPRedditForm.m */,
+				C65498241723B0A900B8756B /* VWWHTTPRedditLoginForm.h */,
+				C65498251723B0A900B8756B /* VWWHTTPRedditLoginForm.m */,
+			);
+			path = forms;
+			sourceTree = "<group>";
+		};
+		C65498261723B0A900B8756B /* json */ = {
+			isa = PBXGroup;
+			children = (
+				C65498271723B0A900B8756B /* VWWRedditAbout.h */,
+				C65498281723B0A900B8756B /* VWWRedditAbout.m */,
+				C65498291723B0A900B8756B /* VWWRedditUserData.h */,
+				C654982A1723B0A900B8756B /* VWWRedditUserData.m */,
+				C65498411723B42300B8756B /* VWWRedditLogin.h */,
+				C65498421723B42300B8756B /* VWWRedditLogin.m */,
+				C65498441723B45200B8756B /* VWWRedditData.h */,
+				C65498451723B45300B8756B /* VWWRedditData.m */,
+				C65498471723B46900B8756B /* VWWRedditErrors.h */,
+				C65498481723B46900B8756B /* VWWRedditErrors.m */,
+			);
+			path = json;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,23 +482,26 @@
 			files = (
 				C65497031723771900B8756B /* main.m in Sources */,
 				C654970A1723771900B8756B /* VWWAppDelegate.m in Sources */,
-				C654976D1723783800B8756B /* NSAlert+MKNetworkKitAdditions.m in Sources */,
-				C654976E1723783800B8756B /* NSData+MKBase64.m in Sources */,
-				C654976F1723783800B8756B /* NSDate+RFC1123.m in Sources */,
-				C65497701723783800B8756B /* NSDictionary+RequestEncoding.m in Sources */,
-				C65497711723783800B8756B /* NSString+MKNetworkKitAdditions.m in Sources */,
-				C65497721723783800B8756B /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
-				C65497731723783800B8756B /* MKNetworkEngine.m in Sources */,
-				C65497741723783800B8756B /* MKNetworkOperation.m in Sources */,
-				C65497751723783800B8756B /* Reachability.m in Sources */,
-				C654977B1723786A00B8756B /* VWWRESTEngine.m in Sources */,
-				C654978117237A3900B8756B /* VWWRESTConfig.m in Sources */,
-				C654978517237EE900B8756B /* VWWRESTParser.m in Sources */,
 				C6549790172386A100B8756B /* VWWUserAboutViewController.m in Sources */,
-				C6549797172386BA00B8756B /* VWWRedditAbout.m in Sources */,
-				C6549798172386BA00B8756B /* VWWRedditUserData.m in Sources */,
-				C65497B11723977800B8756B /* VWWHTTPRedditForm.m in Sources */,
-				C65497B21723977800B8756B /* VWWHTTPRedditLoginForm.m in Sources */,
+				C65498311723B0A900B8756B /* NSAlert+MKNetworkKitAdditions.m in Sources */,
+				C65498321723B0A900B8756B /* NSData+MKBase64.m in Sources */,
+				C65498331723B0A900B8756B /* NSDate+RFC1123.m in Sources */,
+				C65498341723B0A900B8756B /* NSDictionary+RequestEncoding.m in Sources */,
+				C65498351723B0A900B8756B /* NSString+MKNetworkKitAdditions.m in Sources */,
+				C65498361723B0A900B8756B /* UIAlertView+MKNetworkKitAdditions.m in Sources */,
+				C65498371723B0A900B8756B /* MKNetworkEngine.m in Sources */,
+				C65498381723B0A900B8756B /* MKNetworkOperation.m in Sources */,
+				C65498391723B0A900B8756B /* Reachability.m in Sources */,
+				C654983A1723B0A900B8756B /* VWWHTTPRedditForm.m in Sources */,
+				C654983B1723B0A900B8756B /* VWWHTTPRedditLoginForm.m in Sources */,
+				C654983C1723B0A900B8756B /* VWWRedditAbout.m in Sources */,
+				C654983D1723B0A900B8756B /* VWWRedditUserData.m in Sources */,
+				C654983E1723B0A900B8756B /* VWWRESTConfig.m in Sources */,
+				C654983F1723B0A900B8756B /* VWWRESTEngine.m in Sources */,
+				C65498401723B0A900B8756B /* VWWRESTParser.m in Sources */,
+				C65498431723B42400B8756B /* VWWRedditLogin.m in Sources */,
+				C65498461723B45300B8756B /* VWWRedditData.m in Sources */,
+				C65498491723B46A00B8756B /* VWWRedditErrors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 @class VWWRedditAbout;
+@class VWWRedditLogin;
+
 
 @interface VWWRESTParser : NSObject
 +(BOOL)parseJSON:(id)json about:(VWWRedditAbout**)albums;
++(BOOL)parseJSON:(id)json data:(VWWRedditLogin**)login;
 @end

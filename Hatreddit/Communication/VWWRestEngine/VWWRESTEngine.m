@@ -5,6 +5,7 @@
 //  Created by Zakk Hoyt on 2/4/13.
 //  Copyright (c) 2013 Zakk Hoyt. All rights reserved.
 //
+//  Reddit API rules: https://github.com/reddit/reddit/wiki/API
 
 #import "VWWRESTEngine.h"
 #import "VWWRESTConfig.h"
@@ -33,15 +34,6 @@ typedef void (^PSESuccessBlock)(id responseJSON);
 
 #pragma mark Overrides MKNetworkEngine
 
-//+(VWWRESTEngine*)sharedInstance{
-//    static VWWRESTEngine *instance;
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        instance = [[VWWRESTEngine alloc]init];
-//    });
-//    return instance;
-//}
-
 +(VWWRESTEngine*)publicInstance{
     static VWWRESTEngine *publicInstance;
     static dispatch_once_t onceToken;
@@ -62,13 +54,14 @@ typedef void (^PSESuccessBlock)(id responseJSON);
 
 -(id)initForPublic:(BOOL)public{
     if(self){
+        NSDictionary *headers = @{@"User-Agent":@"Objective-c Reddit engine by /u/sneeden"};
         if(public){
             //http://www.reddit.com/user/sneeden/about.json
             self.secure = NO;
             self.config = [VWWRESTConfig sharedInstance];
             self = [super initWithHostName:self.config.publicDomain
                                    apiPath:nil
-                        customHeaderFields:nil];
+                        customHeaderFields:headers];
         }
         else{
             //https://ssl.reddit.com/api/login
@@ -76,8 +69,8 @@ typedef void (^PSESuccessBlock)(id responseJSON);
             self.config = [VWWRESTConfig sharedInstance];
             self = [super initWithHostName:self.config.privateEndpoint
                                    apiPath:nil
-                        customHeaderFields:nil];
-            
+                        customHeaderFields:headers];
+//            User-Agent: super happy flair bot v1.0 by /u/spladug
         }
     }
     return self;
@@ -131,9 +124,7 @@ typedef void (^PSESuccessBlock)(id responseJSON);
                                                      params:jsonDictionary
                                                  httpMethod:kHTTPTRequstTypePost
                                                         ssl:self.secure];
-    
-//    [operation setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
-    
+
     [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
 #if defined(SM_LOG_CURL_COMMANDS)
         NSLog(@"Success! curlString=%@", completedOperation.curlCommandLineString);
@@ -160,8 +151,7 @@ typedef void (^PSESuccessBlock)(id responseJSON);
                                                      params:jsonDictionary
                                                  httpMethod:kHTTPTRequstTypePut
                                                         ssl:self.secure];
-//    [operation setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
-    
+
     [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
 #if defined(SM_LOG_CURL_COMMANDS)
         NSLog(@"Success! curlString=%@", completedOperation.curlCommandLineString);
@@ -229,17 +219,16 @@ typedef void (^PSESuccessBlock)(id responseJSON);
 }
 
 -(MKNetworkOperation*)loginWithForm:(VWWHTTPRedditForm*)form
-                    completionBlock:(VWWStringBlock)completionBlock
+                    completionBlock:(VWWRedditLoginBlock)completionBlock
                          errorBlock:(VWWErrorBlock)errorBlock{
     
     return [self httpPostEndpoint:[NSString stringWithFormat:@"%@", self.config.loginURI]
                   jsonDictionary:[form httpParametersDictionary]
                  completionBlock:^(id json){
-//                     VWWRedditLogin *login = nil;
-//                     [VWWRESTParser parseJSON:json about:&login];
                      
-                     NSLog(@"%@", json);
-                     completionBlock(@"");
+                     VWWRedditLogin *login = nil;
+                     [VWWRESTParser parseJSON:json data:&login];
+                     completionBlock(login);
                  }
                       errorBlock:^(NSError *error, id responseJSON){
                           errorBlock(error, responseJSON[@"message"]);

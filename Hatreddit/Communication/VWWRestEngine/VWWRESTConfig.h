@@ -2,8 +2,7 @@
 //  VWWRESTConfig.h
 //  SmileModel
 //
-//  Created by Aleksandar Tosovic on 4/24/12.
-//  Copyright (c) 2012 Webshots. All rights reserved.
+//  Created by Zakk Hoyt
 //
 
 #import <Foundation/Foundation.h>
@@ -15,7 +14,6 @@
 @property (nonatomic, strong) NSString* publicEndpoint;
 @property (nonatomic, strong) NSString* privateDomain;
 @property (nonatomic, strong) NSString* privateEndpoint;
-
 @property (nonatomic, strong) NSString* loginURI;
 @property (nonatomic, strong) NSString* userURI;
 

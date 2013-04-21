@@ -20,9 +20,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    
-    
-
 
 // Makes window be full screen
 //    NSArray *screenArray = [NSScreen screens];
