@@ -5,7 +5,10 @@
 //  Copyright (c) 2013 Zakk Hoyt. All rights reserved.
 //
 
+
 #import "MKNetworkEngine.h"
+#import "VWWHTTPRedditForm.h"
+
 @class VWWRedditAbout;
 
 typedef void (^VWWBoolBlock)(BOOL success);
@@ -18,10 +21,16 @@ typedef void (^VWWRedditAboutBlock)(VWWRedditAbout *about);
 
 @interface VWWRESTEngine : MKNetworkEngine
 
-+(VWWRESTEngine*)sharedInstance;
++(VWWRESTEngine*)publicInstance;
++(VWWRESTEngine*)privateInstance;
 
 -(MKNetworkOperation*)getAboutInfoUser:(NSString*)user
                              completionBlock:(VWWRedditAboutBlock)completionBlock
                                   errorBlock:(VWWErrorBlock)errorBlock;
+
+
+-(MKNetworkOperation*)loginWithForm:(VWWHTTPRedditForm*)form
+                    completionBlock:(VWWStringBlock)completionBlock
+                         errorBlock:(VWWErrorBlock)errorBlock;
 
 @end

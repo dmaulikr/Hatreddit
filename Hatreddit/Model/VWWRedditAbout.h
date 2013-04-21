@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VWWRedditUserData.h";
-
+#import "VWWRedditUserData.h"
+#import "VWWHTTPRedditLoginForm.h"
 
 @interface VWWRedditAbout : NSObject
 @property (nonatomic, strong) VWWRedditUserData *data;

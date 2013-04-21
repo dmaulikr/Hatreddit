@@ -37,6 +37,8 @@
 		C6549797172386BA00B8756B /* VWWRedditAbout.m in Sources */ = {isa = PBXBuildFile; fileRef = C6549794172386BA00B8756B /* VWWRedditAbout.m */; };
 		C6549798172386BA00B8756B /* VWWRedditUserData.m in Sources */ = {isa = PBXBuildFile; fileRef = C6549796172386BA00B8756B /* VWWRedditUserData.m */; };
 		C65497A4172394B700B8756B /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = C65497A3172394B700B8756B /* icon.icns */; };
+		C65497B11723977800B8756B /* VWWHTTPRedditForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C65497AD1723977800B8756B /* VWWHTTPRedditForm.m */; };
+		C65497B21723977800B8756B /* VWWHTTPRedditLoginForm.m in Sources */ = {isa = PBXBuildFile; fileRef = C65497B01723977800B8756B /* VWWHTTPRedditLoginForm.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,10 @@
 		C6549795172386BA00B8756B /* VWWRedditUserData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRedditUserData.h; sourceTree = "<group>"; };
 		C6549796172386BA00B8756B /* VWWRedditUserData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRedditUserData.m; sourceTree = "<group>"; };
 		C65497A3172394B700B8756B /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		C65497AC1723977800B8756B /* VWWHTTPRedditForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWHTTPRedditForm.h; sourceTree = "<group>"; };
+		C65497AD1723977800B8756B /* VWWHTTPRedditForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWHTTPRedditForm.m; sourceTree = "<group>"; };
+		C65497AF1723977800B8756B /* VWWHTTPRedditLoginForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWHTTPRedditLoginForm.h; sourceTree = "<group>"; };
+		C65497B01723977800B8756B /* VWWHTTPRedditLoginForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWHTTPRedditLoginForm.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +289,7 @@
 		C6549792172386BA00B8756B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C65497A6172396FB00B8756B /* http */,
 				C6549793172386BA00B8756B /* VWWRedditAbout.h */,
 				C6549794172386BA00B8756B /* VWWRedditAbout.m */,
 				C6549795172386BA00B8756B /* VWWRedditUserData.h */,
@@ -326,6 +333,17 @@
 				C65497A3172394B700B8756B /* icon.icns */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C65497A6172396FB00B8756B /* http */ = {
+			isa = PBXGroup;
+			children = (
+				C65497AC1723977800B8756B /* VWWHTTPRedditForm.h */,
+				C65497AD1723977800B8756B /* VWWHTTPRedditForm.m */,
+				C65497AF1723977800B8756B /* VWWHTTPRedditLoginForm.h */,
+				C65497B01723977800B8756B /* VWWHTTPRedditLoginForm.m */,
+			);
+			path = http;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,6 +474,8 @@
 				C6549790172386A100B8756B /* VWWUserAboutViewController.m in Sources */,
 				C6549797172386BA00B8756B /* VWWRedditAbout.m in Sources */,
 				C6549798172386BA00B8756B /* VWWRedditUserData.m in Sources */,
+				C65497B11723977800B8756B /* VWWHTTPRedditForm.m in Sources */,
+				C65497B21723977800B8756B /* VWWHTTPRedditLoginForm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

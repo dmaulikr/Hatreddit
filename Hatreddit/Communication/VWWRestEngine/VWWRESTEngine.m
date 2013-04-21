@@ -26,29 +26,59 @@ typedef void (^PSESuccessBlock)(id responseJSON);
 
 @interface VWWRESTEngine ()
 @property (nonatomic, strong) VWWRESTConfig* config;
+@property (nonatomic) BOOL secure;
 @end
 
 @implementation VWWRESTEngine
 
 #pragma mark Overrides MKNetworkEngine
 
-+(VWWRESTEngine*)sharedInstance{
-    static VWWRESTEngine *instance;
+//+(VWWRESTEngine*)sharedInstance{
+//    static VWWRESTEngine *instance;
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        instance = [[VWWRESTEngine alloc]init];
+//    });
+//    return instance;
+//}
+
++(VWWRESTEngine*)publicInstance{
+    static VWWRESTEngine *publicInstance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[VWWRESTEngine alloc]init];
+        publicInstance = [[VWWRESTEngine alloc]initForPublic:YES];
     });
-    return instance;
+ 
+    return publicInstance;
+}
++(VWWRESTEngine*)privateInstance{
+    static VWWRESTEngine *privateInstance;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        privateInstance = [[VWWRESTEngine alloc]initForPublic:NO];
+    });
+    return privateInstance;
 }
 
--(id)init{
+-(id)initForPublic:(BOOL)public{
     if(self){
-
-        //http://www.reddit.com/user/sneeden/about.json
-        self.config = [VWWRESTConfig sharedInstance];
-        self = [super initWithHostName:self.config.domain
-                               apiPath:nil
-                    customHeaderFields:nil];
+        if(public){
+            //http://www.reddit.com/user/sneeden/about.json
+            self.secure = NO;
+            self.config = [VWWRESTConfig sharedInstance];
+            self = [super initWithHostName:self.config.publicDomain
+                                   apiPath:nil
+                        customHeaderFields:nil];
+        }
+        else{
+            //https://ssl.reddit.com/api/login
+            self.secure = YES;
+            self.config = [VWWRESTConfig sharedInstance];
+            self = [super initWithHostName:self.config.privateEndpoint
+                                   apiPath:nil
+                        customHeaderFields:nil];
+            
+        }
     }
     return self;
 }
@@ -72,7 +102,8 @@ typedef void (^PSESuccessBlock)(id responseJSON);
     
     MKNetworkOperation* operation = [self operationWithPath:endpoint
                                                      params:jsonDictionary
-                                                 httpMethod:kHTTPTRequstTypeGet];
+                                                 httpMethod:kHTTPTRequstTypeGet
+                                                        ssl:self.secure];
     
     [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
 #if defined(SM_LOG_CURL_COMMANDS)
@@ -95,10 +126,11 @@ typedef void (^PSESuccessBlock)(id responseJSON);
                          jsonDictionary:(NSDictionary*)jsonDictionary
                          completionBlock:(PSESuccessBlock)completionBlock
                               errorBlock:(PSEErrorBlock)errorBlock{
-
+    
     MKNetworkOperation* operation = [self operationWithPath:endpoint
-                                              params:jsonDictionary
-                                          httpMethod:kHTTPTRequstTypePost];
+                                                     params:jsonDictionary
+                                                 httpMethod:kHTTPTRequstTypePost
+                                                        ssl:self.secure];
     
     [operation setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
     
@@ -125,8 +157,9 @@ typedef void (^PSESuccessBlock)(id responseJSON);
                              errorBlock:(PSEErrorBlock)errorBlock{
 
     MKNetworkOperation* operation = [self operationWithPath:endpoint
-                                              params:jsonDictionary
-                                          httpMethod:kHTTPTRequstTypePut];
+                                                     params:jsonDictionary
+                                                 httpMethod:kHTTPTRequstTypePut
+                                                        ssl:self.secure];
     [operation setPostDataEncoding:MKNKPostDataEncodingTypeJSON];
     
     [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
@@ -151,7 +184,8 @@ typedef void (^PSESuccessBlock)(id responseJSON);
 
     MKNetworkOperation* operation = [self operationWithPath:endpoint
                                                      params:nil
-                                                 httpMethod:kHTTPTRequstTypeDelete];
+                                                 httpMethod:kHTTPTRequstTypeDelete                                     
+                                                        ssl:self.secure];
     
     [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
 #if defined(SM_LOG_CURL_COMMANDS)
@@ -194,5 +228,23 @@ typedef void (^PSESuccessBlock)(id responseJSON);
     
 }
 
+-(MKNetworkOperation*)loginWithForm:(VWWHTTPRedditForm*)form
+                    completionBlock:(VWWStringBlock)completionBlock
+                         errorBlock:(VWWErrorBlock)errorBlock{
+    
+    return [self httpPostEndpoint:[NSString stringWithFormat:@"%@", self.config.loginURI]
+                  jsonDictionary:[form httpParametersDictionary]
+                 completionBlock:^(id json){
+//                     VWWRedditLogin *login = nil;
+//                     [VWWRESTParser parseJSON:json about:&login];
+                     
+                     NSLog(@"%@", json);
+                     completionBlock(@"");
+                 }
+                      errorBlock:^(NSError *error, id responseJSON){
+                          errorBlock(error, responseJSON[@"message"]);
+                      }];
+
+}
 
 @end

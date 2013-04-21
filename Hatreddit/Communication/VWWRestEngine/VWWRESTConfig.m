@@ -8,7 +8,8 @@
 
 #import "VWWRESTConfig.h"
 
-static NSString *kServer = @"www.reddit.com";
+static NSString *kPublicServer = @"www.reddit.com";
+static NSString *kPrivateServer = @"ssl.reddit.com";
 
 @interface VWWRESTConfig ()
 
@@ -27,8 +28,12 @@ static NSString *kServer = @"www.reddit.com";
 -(id)init{
     self = [super init];
     if(self){
-        _domain = kServer;
-        //_endpoint = [NSString stringWithFormat:@"%@/", kServer];
+        _publicDomain = kPublicServer;
+        _publicEndpoint = [NSString stringWithFormat:@"%@/api", kPublicServer];
+        _privateDomain = kPrivateServer;
+        _privateEndpoint = [NSString stringWithFormat:@"%@/api", kPrivateServer];
+
+        _loginURI = @"login";
         _userURI = @"user";
     }
     return self;
