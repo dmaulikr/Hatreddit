@@ -74,12 +74,8 @@
 
 - (IBAction)loginButtonAction:(id)sender {
     VWWHTTPRedditLoginForm *form = [VWWHTTPRedditLoginForm new];
-//    form.username = @"sneeden";
-//    form.password = @"jfy45h1";
-//    form.user = @"sneeden";
-//    form.passwd = @"jfy45h1";
-    form.user = @"hydrocodone_asap";
-    form.passwd = @"jfy45h1";
+    form.user = self.usernameTextField.stringValue;
+    form.passwd = self.passwordTextField.stringValue;
     
     [[VWWRESTEngine privateInstance] loginWithForm:form
                                   completionBlock:^(VWWRedditLogin *login) {

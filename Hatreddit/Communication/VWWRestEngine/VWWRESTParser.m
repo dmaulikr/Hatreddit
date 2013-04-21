@@ -66,10 +66,10 @@
 
     NSDictionary *jsonDictionary = json[@"json"];
     NSDictionary *dataDictionary = jsonDictionary[@"data"];
-    NSDictionary *errorsDictionary = jsonDictionary[@"errors"];
+    NSArray *errorsArray = jsonDictionary[@"errors"];
     
     (*login).data = [VWWRedditData dataWithDictionary:dataDictionary];
-    (*login).errors = [VWWRedditErrors errorsWithDictionary:errorsDictionary];
+    (*login).errors = [VWWRedditErrors errorsWithArray:errorsArray];
     
     
     return YES;

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface VWWRedditErrors : NSObject
-+ (id)errorsWithDictionary:(NSDictionary*)dictionary;
-//- (id)initWithDictionary:(NSDictionary*)dictionary;
+@property (nonatomic, strong) NSArray* errors;
++ (id)errorsWithArray:(NSArray*)dictionary;
 -(NSString*)description;
 @end

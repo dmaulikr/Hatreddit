@@ -10,19 +10,20 @@
 
 @implementation VWWRedditErrors
 
-+ (id)errorsWithDictionary:(NSDictionary*)dictionary{
-    return [[VWWRedditErrors alloc]initWithDictionary:dictionary];
++ (id)errorsWithArray:(NSArray*)array{
+    return [[VWWRedditErrors alloc]initWithArray:array];
 }
 
-- (id)initWithDictionary:(NSDictionary*)dictionary{
+- (id)initWithArray:(NSArray*)array{
     self = [super init];
     if(self){
+        _errors = [NSArray arrayWithArray:array];
     }
     return self;
 }
 
 -(NSString*)description{
-    return @"";
+    return self.errors.description;
 }
 
 @end
