@@ -68,6 +68,7 @@
     NSDictionary *dataDictionary = jsonDictionary[@"data"];
     NSArray *errorsArray = jsonDictionary[@"errors"];
     
+    *login = [VWWRedditLogin new];
     (*login).data = [VWWRedditData dataWithDictionary:dataDictionary];
     (*login).errors = [VWWRedditErrors errorsWithArray:errorsArray];
     

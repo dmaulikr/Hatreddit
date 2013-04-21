@@ -10,6 +10,7 @@
 #import "VWWRESTEngine.h"
 #import "VWWRESTConfig.h"
 #import "VWWRedditAbout.h"
+#import "VWWRedditLogin.h"
 #import "VWWRESTParser.h"
 
 #define SM_LOG_CURL_COMMANDS 1
@@ -228,7 +229,13 @@ typedef void (^PSESuccessBlock)(id responseJSON);
                      
                      VWWRedditLogin *login = nil;
                      [VWWRESTParser parseJSON:json data:&login];
-                     completionBlock(login);
+                     
+                     if(login.errors.errors.count){
+                         errorBlock(nil, login.errors.errors.description);
+                     }
+                     else{
+                         completionBlock(login);
+                     }
                  }
                       errorBlock:^(NSError *error, id responseJSON){
                           errorBlock(error, responseJSON[@"message"]);

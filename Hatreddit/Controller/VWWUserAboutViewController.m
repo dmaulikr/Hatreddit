@@ -80,12 +80,12 @@
     [[VWWRESTEngine privateInstance] loginWithForm:form
                                   completionBlock:^(VWWRedditLogin *login) {
                                       if(login.errors){
-                                          
+                                            NSLog(@"Error returned: %@", login.errors.errors);
                                       }
                                       NSLog(@"");
                                   } errorBlock:^(NSError *error, NSString *additionalInfo) {
                                       
-                                      NSLog(@"");
+                                      NSLog(@"ERROR(s)! %@", additionalInfo);
                                   }];
 }
 
