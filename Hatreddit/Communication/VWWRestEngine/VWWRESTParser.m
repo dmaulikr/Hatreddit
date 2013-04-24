@@ -36,14 +36,11 @@
     if(json == nil){
         return NO;
     }
-    
-
 
     *about = [[VWWRedditAbout alloc]init];
     NSDictionary *dataDictionary = json[@"data"];
     VWWRedditUserData *data = [VWWRedditUserData userWithDictionary:dataDictionary];
     NSString *kind = json[@"kind"];
-    
     
     (*about).data = data;
     (*about).kind = kind;
@@ -63,287 +60,37 @@
 //    };
 //}
 +(BOOL)parseJSON:(id)json data:(VWWRedditLogin**)login{
-
+    
     NSDictionary *jsonDictionary = json[@"json"];
     NSDictionary *dataDictionary = jsonDictionary[@"data"];
-    NSArray *errorsArray = jsonDictionary[@"errors"];
-    
-    *login = [VWWRedditLogin new];
+    *login = [[VWWRedditLogin alloc]init];
     (*login).data = [VWWRedditData dataWithDictionary:dataDictionary];
-    (*login).errors = [VWWRedditErrors errorsWithArray:errorsArray];
-    
-    
     return YES;
 }
 
 
+//{
+//    json =     {
+//        errors =         (
+//                          (
+//                           "WRONG_PASSWORD",
+//                           "invalid password",
+//                           passwd
+//                           )
+//                          );
+//    };
+//}
++(BOOL)parseJSON:(id)json errorDescription:(NSString**)errorDescription{
+    NSDictionary *jsonDictionary = json[@"json"];
+    NSArray *errorsArray = jsonDictionary[@"errors"];
+    if(errorsArray == nil || errorsArray.count == 0) return NO;
+    
+    // Do all errors return an array of size 3? Seems like element 1 is the most user friendly to read, so return that if possible.
+    if(errorsArray.count >= 2) (*errorDescription) = [NSString stringWithFormat:@"%@", errorsArray[1]];
+    else if(errorsArray.count >= 1) (*errorDescription) = [NSString stringWithFormat:@"%@", errorsArray[0]];
 
-
-
-//#pragma mark Private helpers
-//+(void)examineDictionary:(NSDictionary*)dictionary forPage:(SMPagination**)page{
-//    
-//    BOOL paramFound = NO;
-//    *page = [[SMPagination alloc]init];
-//    
-//    NSNumber* temp = dictionary[@"per_page"];
-//    if(temp){
-//        paramFound = YES;
-//        (*page).perPageItemsCount = temp.intValue;
-//    }
-//    
-//    temp = dictionary[@"total_count"];
-//    if(temp){
-//        paramFound = YES;
-//        (*page).totalItemsCount = temp.intValue;
-//    }
-//    
-//    temp = dictionary[@"page_number"];
-//    if(temp){
-//        paramFound = YES;
-//        (*page).pageNumber = temp.intValue;
-//    }
-//    
-//    // If we never found anythign, page should be nil.
-//    if(paramFound == NO){
-//        *page = nil;
-//    }
-//    
-//}
-
-
-#pragma mark Public methods
-//+(BOOL)parseJSON:(id)json albums:(NSArray**)albums page:(SMPagination**)page{
-//    return NO;
-//}
-
-//+(BOOL)parseJSON:(id)json assets:(NSArray**)assets page:(SMPagination**)page{
-//
-//    NSError* jsonError;
-//    NSDictionary *dictionary;
-//    if([json isKindOfClass:[NSDictionary class]]){
-//        dictionary = json;
-//    }
-//    else{
-//        dictionary = [NSJSONSerialization JSONObjectWithData:json
-//                                                     options:kNilOptions
-//                                                       error:&jsonError];
-//        if(jsonError){
-//            DDLogError(@"%s:%d Error occured while parsing JSON: %@", __FUNCTION__, __LINE__, jsonError.localizedDescription);
-//            return NO;
-//        }
-//    }
-//    [VWWRESTParser examineDictionary:dictionary forPage:page];
-//    
-//    NSMutableArray* mutableAssets = [@[]mutableCopy];
-//    NSArray *assetsDictionaries = (NSArray*)dictionary[@"assets"];
-//    for(NSDictionary *d in assetsDictionaries) {
-//        [mutableAssets addObject:[SMAsset assetWithDictionary:d]];
-//    }
-//    *assets = (NSArray*)mutableAssets;
-//    
-//    return YES;
-//}
-//
-//
-//
-//+(BOOL)parseJSON:(id)json devices:(NSArray**)devices page:(SMPagination**)page{
-//    NSError *jsonError;
-//    NSDictionary *dictionary;
-//    if([json isKindOfClass:[NSDictionary class]]){
-//        dictionary = json;
-//    }
-//    else{
-//        dictionary = [NSJSONSerialization JSONObjectWithData:json
-//                                                     options:kNilOptions
-//                                                       error:&jsonError];
-//        if(jsonError){
-//            DDLogError(@"%s:%d Error occured while parsing JSON: %@", __FUNCTION__, __LINE__, jsonError.localizedDescription);
-//            return NO;
-//        }
-//    }
-//    
-//    [VWWRESTParser examineDictionary:dictionary forPage:page];
-//    
-//    NSMutableArray* mutableDevices = [@[]mutableCopy];
-//    NSArray *assetsDictionaries = (NSArray*)dictionary[@"devices"];
-//    for(NSDictionary *d in assetsDictionaries) {
-//        [mutableDevices addObject:[SMSource sourceWithDictionary:d]];
-//    }
-//    *devices = (NSArray*)mutableDevices;
-//    
-//    return YES;
-//}
-//
-//
-//+(BOOL)parseJSON:(id)json facetGUIProperties:(NSArray**)facetGUIProperties page:(SMPagination**)page{
-//    NSError* jsonError;
-//    NSDictionary *dictionary;
-//    if(json == nil){
-//        //NSAssert(NO, @"Somethign is not right!");
-//        return NO;
-//    }
-//    if([json isKindOfClass:[NSDictionary class]]){
-//        dictionary = json;
-//    }
-//    else{
-//        dictionary = [NSJSONSerialization JSONObjectWithData:json
-//                                                     options:kNilOptions
-//                                                       error:&jsonError];
-//        if(jsonError){
-//            DDLogError(@"%s:%d Error occured while parsing JSON: %@", __FUNCTION__, __LINE__, jsonError.localizedDescription);
-//            return NO;
-//        }
-//    }
-//    
-//    
-//    if(jsonError){
-//        DDLogError(@"%s:%d Error occured while parsing JSON: %@", __FUNCTION__, __LINE__, jsonError.localizedDescription);
-//        return NO;
-//    }
-//    
-//    [VWWRESTParser examineDictionary:dictionary forPage:page];
-//    
-//    NSMutableArray* mutableDictionary = [@[]mutableCopy];
-//    NSArray *dictionaries = (NSArray*)dictionary[@"facet_order"];
-//    for(NSDictionary *d in dictionaries) {
-//        [mutableDictionary addObject:[SMFacetsGUIProperties facetsGUIPropertiesWithDictionary:d]];
-//    }
-//    *facetGUIProperties = (NSArray*)mutableDictionary;
-//    
-//    return YES;
-//    
-//}
-//
-//
-//
-//+(BOOL)parseJSON:(id)json facets:(NSArray**)facets page:(SMPagination**)page{
-//    NSError *jsonError;
-//    NSDictionary *dictionary;
-//    if([json isKindOfClass:[NSDictionary class]]){
-//        dictionary = json;
-//    }
-//    else{
-//        dictionary = [NSJSONSerialization JSONObjectWithData:json
-//                                                     options:kNilOptions
-//                                                       error:&jsonError];
-//        if(jsonError){
-//            DDLogError(@"%s:%d Error occured while parsing JSON: %@", __FUNCTION__, __LINE__, jsonError.localizedDescription);
-//            return NO;
-//        }
-//    }
-//    
-//    [VWWRESTParser examineDictionary:dictionary forPage:page];
-//    
-//    NSMutableArray* mutableFacets = [@[]mutableCopy];
-//    NSArray *facetsDictionaries = (NSArray*)dictionary[@"pivot_facets"];
-//    for(NSDictionary *d in facetsDictionaries) {
-//        [mutableFacets addObject:[SMPivotFacet pivotFacetWithDictionary:d]];
-//    }
-//    *facets = (NSArray*)mutableFacets;
-//    
-//    return YES;
-//
-//}
-//+(BOOL)parseJSON:(id)json followers:(NSArray**)followers page:(SMPagination**)page{
-//    return NO;
-//}
-//+(BOOL)parseJSON:(id)json friends:(NSArray**)friends page:(SMPagination**)page{
-//    return NO;
-//}
-//+(BOOL)parseJSON:(id)json services:(NSArray**)services page:(SMPagination**)page{
-//    NSError* jsonError;
-//    NSDictionary *dictionary;
-//    if([json isKindOfClass:[NSDictionary class]]){
-//        dictionary = json;
-//    }
-//    else{
-//        dictionary = [NSJSONSerialization JSONObjectWithData:json
-//                                                     options:kNilOptions
-//                                                       error:&jsonError];
-//        if(jsonError){
-//            DDLogError(@"%s:%d Error occured while parsing JSON: %@", __FUNCTION__, __LINE__, jsonError.localizedDescription);
-//            return NO;
-//        }
-//    }
-//    
-//    
-//    [VWWRESTParser examineDictionary:dictionary forPage:page];
-//    
-//    NSMutableArray* mutableArray = [@[]mutableCopy];
-//    for(NSString *s in dictionary){
-//        [mutableArray addObject:s];
-//    }
-//    *services = (NSArray*)mutableArray;
-//    
-//    return YES;
-//}
-//
-//
-//// Expect a page with an array:
-////{
-////    "page_number":1,
-////    "per_page":10,
-////    "total_count":3,
-////    "next_page":"",
-////    "previous_page":"",
-////    "first_page":"http://wbs.ht/api/v2/sources?page=1",
-////    "last_page":"http://wbs.ht/api/v2/sources?page=1",
-////    "sources":[]
-////}
-//+(BOOL)parseJSON:(id)json sources:(NSArray**)sources page:(SMPagination**)page{
-//    NSError *jsonError;
-//    NSDictionary *dictionary;
-//    if([json isKindOfClass:[NSDictionary class]]){
-//        dictionary = json;
-//    }
-//    else{
-//        dictionary = [NSJSONSerialization JSONObjectWithData:json
-//                                                     options:kNilOptions
-//                                                       error:&jsonError];
-//        if(jsonError){
-//            DDLogError(@"%s:%d Error occured while parsing JSON: %@", __FUNCTION__, __LINE__, jsonError.localizedDescription);
-//            return NO;
-//        }
-//    }
-//    
-//    [VWWRESTParser examineDictionary:dictionary forPage:page];
-//    
-//    NSMutableArray* mutableArray = [@[]mutableCopy];
-//    NSArray *dictionaries = (NSArray*)dictionary[@"sources"];
-//    for(NSDictionary *d in dictionaries) {
-//        [mutableArray addObject:[SMSource sourceWithDictionary:d]];
-//    }
-//    *sources = (NSArray*)mutableArray;
-//    
-//    return YES;
-//}
-//
-//
-//+(BOOL)parseJSON:(id)json user:(SMUser*)user{
-//    NSError* jsonError;
-//    NSDictionary *dictionary;
-//    if([json isKindOfClass:[NSDictionary class]]){
-//        dictionary = json;
-//    }
-//    else{
-//        dictionary = [NSJSONSerialization JSONObjectWithData:json
-//                                                     options:kNilOptions
-//                                                       error:&jsonError];
-//        if(jsonError){
-//            DDLogError(@"%s:%d Error occured while parsing JSON: %@", __FUNCTION__, __LINE__, jsonError.localizedDescription);
-//            return NO;
-//        }
-//    }
-//    
-//    NSMutableArray* mutableArray = [@[]mutableCopy];
-//    for(NSString *s in dictionary){
-//        [mutableArray addObject:s];
-//    }
-//    
-//    
-//    return YES;
-//}
+    return YES;
+}
 
 
 

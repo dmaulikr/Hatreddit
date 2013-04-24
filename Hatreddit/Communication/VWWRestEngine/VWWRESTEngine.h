@@ -16,7 +16,7 @@
 typedef void (^VWWBoolBlock)(BOOL success);
 typedef void (^VWWEmptyBlock)(void);
 
-typedef void (^VWWErrorBlock)(NSError *error, NSString *additionalInfo);
+typedef void (^VWWErrorBlock)(NSString* errorDescription);
 typedef void (^VWWStringBlock)(NSString *string);
 typedef void (^VWWRedditAboutBlock)(VWWRedditAbout *about);
 typedef void (^VWWRedditLoginBlock)(VWWRedditLogin *login);
@@ -27,7 +27,7 @@ typedef void (^VWWRedditLoginBlock)(VWWRedditLogin *login);
 +(VWWRESTEngine*)publicInstance;
 +(VWWRESTEngine*)privateInstance;
 
--(MKNetworkOperation*)getAboutInfoUser:(NSString*)user
+-(MKNetworkOperation*)getPublicInfoAboutUser:(NSString*)user
                              completionBlock:(VWWRedditAboutBlock)completionBlock
                                   errorBlock:(VWWErrorBlock)errorBlock;
 
@@ -35,5 +35,10 @@ typedef void (^VWWRedditLoginBlock)(VWWRedditLogin *login);
 -(MKNetworkOperation*)loginWithForm:(VWWHTTPRedditForm*)form
                     completionBlock:(VWWRedditLoginBlock)completionBlock
                          errorBlock:(VWWErrorBlock)errorBlock;
+
+-(MKNetworkOperation*)meWithForm:(VWWHTTPRedditForm*)form
+                    completionBlock:(VWWStringBlock)completionBlock
+                         errorBlock:(VWWErrorBlock)errorBlock;
+
 
 @end

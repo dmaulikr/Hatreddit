@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSString* privateDomain;
 @property (nonatomic, strong) NSString* privateEndpoint;
 @property (nonatomic, strong) NSString* loginURI;
+@property (nonatomic, strong) NSString* meURI;
 @property (nonatomic, strong) NSString* userURI;
 
 +(VWWRESTConfig*)sharedInstance;

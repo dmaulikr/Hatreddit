@@ -34,6 +34,7 @@ static NSString *kPrivateServer = @"ssl.reddit.com";
         _privateEndpoint = [NSString stringWithFormat:@"%@/api", kPrivateServer];
 
         _loginURI = @"login";
+        _meURI = @"v1/me";
         _userURI = @"user";
     }
     return self;

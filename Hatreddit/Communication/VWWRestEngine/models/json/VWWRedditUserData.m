@@ -26,7 +26,8 @@
     self = [super init];
     if(self){
         _commentKarma = [dictionary objectForKey:@"comment_karma"];
-        _hasMail = [dictionary objectForKey:@"has_mail"];
+        _hasMail = [dictionary  objectForKey:@"has_mail"];
+        if(_hasMail == [NSNull null]) _hasMail = @(0);
         _linkKarma= [dictionary objectForKey:@"link_karma"];
         _name= [dictionary objectForKey:@"name"];
     }
@@ -35,7 +36,7 @@
 
 
 -(NSString*)description{
-    return [NSString stringWithFormat:@"name:%@ has_mail:%@ link_karma:%@ comment_karma:%@",
+    return [NSString stringWithFormat:@"name:%@ has_verified_mail:%@ link_karma:%@ comment_karma:%@",
             _name, _hasMail, _linkKarma, _commentKarma];
 }
 

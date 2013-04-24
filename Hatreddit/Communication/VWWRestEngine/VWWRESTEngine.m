@@ -15,7 +15,6 @@
 
 #define SM_LOG_CURL_COMMANDS 1
 
-
 static NSString* kHTTPTRequstTypePost = @"POST";
 static NSString* kHTTPTRequstTypeGet = @"GET";
 static NSString* kHTTPTRequstTypePut = @"PUT";
@@ -23,8 +22,6 @@ static NSString* kHTTPTRequstTypeDelete = @"DELETE";
 
 typedef void (^PSEErrorBlock)(NSError* error, id responseJSON);
 typedef void (^PSESuccessBlock)(id responseJSON);
-
-
 
 @interface VWWRESTEngine ()
 @property (nonatomic, strong) VWWRESTConfig* config;
@@ -199,11 +196,12 @@ typedef void (^PSESuccessBlock)(id responseJSON);
 
 #pragma mark Public custom methods
 
--(MKNetworkOperation*)getAboutInfoUser:(NSString*)user
+
+
+-(MKNetworkOperation*)getPublicInfoAboutUser:(NSString*)user
                              completionBlock:(VWWRedditAboutBlock)completionBlock
                                   errorBlock:(VWWErrorBlock)errorBlock{
 
-    //http://www.reddit.com/user/sneeden/about.json
     
     return [self httpGetEndpoint:[NSString stringWithFormat:@"%@/%@/about.json", self.config.userURI, user]
                   jsonDictionary:nil
@@ -213,8 +211,8 @@ typedef void (^PSESuccessBlock)(id responseJSON);
                      
                      completionBlock(about);
                  }
-                      errorBlock:^(NSError *error, id responseJSON){
-                          errorBlock(error, responseJSON[@"message"]);
+                      errorBlock:^(NSError *error, id responseJSON) {
+                          errorBlock(error.localizedDescription);
                       }];
     
 }
@@ -222,25 +220,53 @@ typedef void (^PSESuccessBlock)(id responseJSON);
 -(MKNetworkOperation*)loginWithForm:(VWWHTTPRedditForm*)form
                     completionBlock:(VWWRedditLoginBlock)completionBlock
                          errorBlock:(VWWErrorBlock)errorBlock{
-    
+
     return [self httpPostEndpoint:[NSString stringWithFormat:@"%@", self.config.loginURI]
                   jsonDictionary:[form httpParametersDictionary]
                  completionBlock:^(id json){
+    
+                     NSString *errorDescription;
+                     if([VWWRESTParser parseJSON:json errorDescription:&errorDescription] == YES){
+                         errorBlock(errorDescription);
+                         return;
+                     }
                      
                      VWWRedditLogin *login = nil;
                      [VWWRESTParser parseJSON:json data:&login];
-                     
                      if(login.errors.errors.count){
-                         errorBlock(nil, login.errors.errors.description);
+                         errorBlock(login.errors.errors.description);
                      }
                      else{
                          completionBlock(login);
                      }
                  }
-                      errorBlock:^(NSError *error, id responseJSON){
-                          errorBlock(error, responseJSON[@"message"]);
+                      errorBlock:^(NSError *error, id responseJSON) {
+                          errorBlock(error.localizedDescription);
                       }];
 
+}
+
+
+-(MKNetworkOperation*)meWithForm:(VWWHTTPRedditForm*)form
+                 completionBlock:(VWWStringBlock)completionBlock
+                      errorBlock:(VWWErrorBlock)errorBlock{
+    return [self httpGetEndpoint:[NSString stringWithFormat:@"%@", self.config.meURI]
+                   jsonDictionary:nil
+                  completionBlock:^(id json){
+                      
+                      NSString *errorDescription;
+                      if([VWWRESTParser parseJSON:json errorDescription:&errorDescription] == YES){
+                          errorBlock(errorDescription);
+                          return;
+                      }
+
+                      // TODO: parsing
+                      completionBlock((NSString*)json);
+                  }
+                      errorBlock:^(NSError *error, id responseJSON){
+                          errorBlock(error.localizedDescription);
+                       }];
+    
 }
 
 @end

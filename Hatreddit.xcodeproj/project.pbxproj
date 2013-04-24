@@ -20,8 +20,6 @@
 		C654974C172377C800B8756B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6549749172377C800B8756B /* CFNetwork.framework */; };
 		C654974D172377C800B8756B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C654974A172377C800B8756B /* Security.framework */; };
 		C654974E172377C800B8756B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C654974B172377C800B8756B /* SystemConfiguration.framework */; };
-		C6549790172386A100B8756B /* VWWUserAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C654978E172386A000B8756B /* VWWUserAboutViewController.m */; };
-		C6549791172386A100B8756B /* VWWUserAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C654978F172386A000B8756B /* VWWUserAboutViewController.xib */; };
 		C65497A4172394B700B8756B /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = C65497A3172394B700B8756B /* icon.icns */; };
 		C65498311723B0A900B8756B /* NSAlert+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C654980D1723B0A900B8756B /* NSAlert+MKNetworkKitAdditions.m */; };
 		C65498321723B0A900B8756B /* NSData+MKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = C654980F1723B0A900B8756B /* NSData+MKBase64.m */; };
@@ -42,6 +40,13 @@
 		C65498431723B42400B8756B /* VWWRedditLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498421723B42300B8756B /* VWWRedditLogin.m */; };
 		C65498461723B45300B8756B /* VWWRedditData.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498451723B45300B8756B /* VWWRedditData.m */; };
 		C65498491723B46A00B8756B /* VWWRedditErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498481723B46900B8756B /* VWWRedditErrors.m */; };
+		C654984C1727357400B8756B /* VWWUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = C654984B1727357200B8756B /* VWWUserDefaults.m */; };
+		C654985A1727741E00B8756B /* VWWConfigureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498551727741E00B8756B /* VWWConfigureViewController.m */; };
+		C654985B1727741E00B8756B /* VWWConfigureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C65498561727741E00B8756B /* VWWConfigureViewController.xib */; };
+		C654985C1727741E00B8756B /* VWWUserAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498581727741E00B8756B /* VWWUserAboutViewController.m */; };
+		C654985D1727741E00B8756B /* VWWUserAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C65498591727741E00B8756B /* VWWUserAboutViewController.xib */; };
+		C654985F1727804D00B8756B /* todo.txt in Resources */ = {isa = PBXBuildFile; fileRef = C654985E1727804B00B8756B /* todo.txt */; };
+		C65498621727818B00B8756B /* VWWNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = C65498611727818B00B8756B /* VWWNumberFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,9 +82,6 @@
 		C6549749172377C800B8756B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C654974A172377C800B8756B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C654974B172377C800B8756B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		C654978D172386A000B8756B /* VWWUserAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VWWUserAboutViewController.h; path = Controller/VWWUserAboutViewController.h; sourceTree = "<group>"; };
-		C654978E172386A000B8756B /* VWWUserAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VWWUserAboutViewController.m; path = Controller/VWWUserAboutViewController.m; sourceTree = "<group>"; };
-		C654978F172386A000B8756B /* VWWUserAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VWWUserAboutViewController.xib; path = Controller/VWWUserAboutViewController.xib; sourceTree = "<group>"; };
 		C65497A3172394B700B8756B /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		C654980C1723B0A900B8756B /* NSAlert+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAlert+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
 		C654980D1723B0A900B8756B /* NSAlert+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
@@ -120,6 +122,17 @@
 		C65498451723B45300B8756B /* VWWRedditData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRedditData.m; sourceTree = "<group>"; };
 		C65498471723B46900B8756B /* VWWRedditErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWRedditErrors.h; sourceTree = "<group>"; };
 		C65498481723B46900B8756B /* VWWRedditErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWRedditErrors.m; sourceTree = "<group>"; };
+		C654984A1727357100B8756B /* VWWUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VWWUserDefaults.h; path = Communication/VWWUserDefaults.h; sourceTree = "<group>"; };
+		C654984B1727357200B8756B /* VWWUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VWWUserDefaults.m; path = Communication/VWWUserDefaults.m; sourceTree = "<group>"; };
+		C65498541727741E00B8756B /* VWWConfigureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWConfigureViewController.h; sourceTree = "<group>"; };
+		C65498551727741E00B8756B /* VWWConfigureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWConfigureViewController.m; sourceTree = "<group>"; };
+		C65498561727741E00B8756B /* VWWConfigureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VWWConfigureViewController.xib; sourceTree = "<group>"; };
+		C65498571727741E00B8756B /* VWWUserAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VWWUserAboutViewController.h; path = ../Configure/VWWUserAboutViewController.h; sourceTree = "<group>"; };
+		C65498581727741E00B8756B /* VWWUserAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VWWUserAboutViewController.m; path = ../Configure/VWWUserAboutViewController.m; sourceTree = "<group>"; };
+		C65498591727741E00B8756B /* VWWUserAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VWWUserAboutViewController.xib; path = ../Configure/VWWUserAboutViewController.xib; sourceTree = "<group>"; };
+		C654985E1727804B00B8756B /* todo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = todo.txt; sourceTree = "<group>"; };
+		C65498601727818A00B8756B /* VWWNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWWNumberFormatter.h; sourceTree = "<group>"; };
+		C65498611727818B00B8756B /* VWWNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWWNumberFormatter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +204,8 @@
 		C65496FC1723771900B8756B /* Hatreddit */ = {
 			isa = PBXGroup;
 			children = (
+				C65498631727850700B8756B /* Utilities */,
+				C654985E1727804B00B8756B /* todo.txt */,
 				C654979C172392A300B8756B /* Resources */,
 				C65497991723872700B8756B /* Controller */,
 				C654974F1723783800B8756B /* Communication */,
@@ -241,20 +256,11 @@
 		C65497991723872700B8756B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C65498521727741E00B8756B /* About */,
+				C65498531727741E00B8756B /* Configure */,
 				C654979B1723875B00B8756B /* Main */,
-				C654979A1723875500B8756B /* About */,
-				C654978D172386A000B8756B /* VWWUserAboutViewController.h */,
-				C654978E172386A000B8756B /* VWWUserAboutViewController.m */,
-				C654978F172386A000B8756B /* VWWUserAboutViewController.xib */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		C654979A1723875500B8756B /* About */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = About;
 			sourceTree = "<group>";
 		};
 		C654979B1723875B00B8756B /* Main */ = {
@@ -369,6 +375,39 @@
 			path = json;
 			sourceTree = "<group>";
 		};
+		C65498521727741E00B8756B /* About */ = {
+			isa = PBXGroup;
+			children = (
+				C65498571727741E00B8756B /* VWWUserAboutViewController.h */,
+				C65498581727741E00B8756B /* VWWUserAboutViewController.m */,
+				C65498591727741E00B8756B /* VWWUserAboutViewController.xib */,
+			);
+			name = About;
+			path = Controller/About;
+			sourceTree = "<group>";
+		};
+		C65498531727741E00B8756B /* Configure */ = {
+			isa = PBXGroup;
+			children = (
+				C65498541727741E00B8756B /* VWWConfigureViewController.h */,
+				C65498551727741E00B8756B /* VWWConfigureViewController.m */,
+				C65498561727741E00B8756B /* VWWConfigureViewController.xib */,
+			);
+			name = Configure;
+			path = Controller/Configure;
+			sourceTree = "<group>";
+		};
+		C65498631727850700B8756B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C65498601727818A00B8756B /* VWWNumberFormatter.h */,
+				C65498611727818B00B8756B /* VWWNumberFormatter.m */,
+				C654984A1727357100B8756B /* VWWUserDefaults.h */,
+				C654984B1727357200B8756B /* VWWUserDefaults.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -444,8 +483,10 @@
 				C65497011723771900B8756B /* InfoPlist.strings in Resources */,
 				C65497071723771900B8756B /* Credits.rtf in Resources */,
 				C654970D1723771900B8756B /* MainMenu.xib in Resources */,
-				C6549791172386A100B8756B /* VWWUserAboutViewController.xib in Resources */,
 				C65497A4172394B700B8756B /* icon.icns in Resources */,
+				C654985B1727741E00B8756B /* VWWConfigureViewController.xib in Resources */,
+				C654985D1727741E00B8756B /* VWWUserAboutViewController.xib in Resources */,
+				C654985F1727804D00B8756B /* todo.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +523,6 @@
 			files = (
 				C65497031723771900B8756B /* main.m in Sources */,
 				C654970A1723771900B8756B /* VWWAppDelegate.m in Sources */,
-				C6549790172386A100B8756B /* VWWUserAboutViewController.m in Sources */,
 				C65498311723B0A900B8756B /* NSAlert+MKNetworkKitAdditions.m in Sources */,
 				C65498321723B0A900B8756B /* NSData+MKBase64.m in Sources */,
 				C65498331723B0A900B8756B /* NSDate+RFC1123.m in Sources */,
@@ -502,6 +542,10 @@
 				C65498431723B42400B8756B /* VWWRedditLogin.m in Sources */,
 				C65498461723B45300B8756B /* VWWRedditData.m in Sources */,
 				C65498491723B46A00B8756B /* VWWRedditErrors.m in Sources */,
+				C654984C1727357400B8756B /* VWWUserDefaults.m in Sources */,
+				C654985A1727741E00B8756B /* VWWConfigureViewController.m in Sources */,
+				C654985C1727741E00B8756B /* VWWUserAboutViewController.m in Sources */,
+				C65498621727818B00B8756B /* VWWNumberFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,7 +22,7 @@
 @property (nonatomic, strong) NSString* commentKarma;
 //@property (nonatomic, strong) NSString* created;
 //@property (nonatomic, strong) NSString* createdUTC;
-@property (nonatomic, strong) NSString* hasMail;
+@property (nonatomic, strong) NSNumber* hasMail;
 //@property (nonatomic, strong) NSString* hasModMail;
 //@property (nonatomic, strong) NSString* hasVerifiedMail;
 //@property (nonatomic, strong) NSString* identifier;

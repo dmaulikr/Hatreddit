@@ -1,0 +1,4 @@
+* modify icon
+* integrate timer (and gui/userdefault)
+* show new message count
+* update new message count when app touched
