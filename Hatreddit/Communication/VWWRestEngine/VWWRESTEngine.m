@@ -100,12 +100,20 @@ typedef void (^PSESuccessBlock)(id responseJSON);
 #if defined(SM_LOG_CURL_COMMANDS)
         NSLog(@"Success! curlString=%@", completedOperation.curlCommandLineString);
 #endif
-        completionBlock(completedOperation.responseJSON);
+        [completedOperation responseJSONWithOptions:NSJSONReadingAllowFragments
+                                  completionHandler:^(id jsonObject) {
+                                      completionBlock(jsonObject);
+                                  }];
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
 #if defined(SM_LOG_CURL_COMMANDS)
         NSLog(@"Error! curlString=%@", completedOperation.curlCommandLineString);
 #endif
-        errorBlock(error, completedOperation.responseJSON);
+
+        [completedOperation responseJSONWithOptions:NSJSONReadingAllowFragments
+                                  completionHandler:^(id jsonObject) {
+                                      errorBlock(error, jsonObject);
+                                  }];
+
     }];
     
     [self enqueueOperation:operation];
@@ -208,7 +216,6 @@ typedef void (^PSESuccessBlock)(id responseJSON);
                  completionBlock:^(id json){
                      VWWRedditAbout *about = nil;
                      [VWWRESTParser parseJSON:json about:&about];
-                     
                      completionBlock(about);
                  }
                       errorBlock:^(NSError *error, id responseJSON) {

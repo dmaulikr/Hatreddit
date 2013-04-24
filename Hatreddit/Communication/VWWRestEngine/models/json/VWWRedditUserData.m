@@ -26,8 +26,11 @@
     self = [super init];
     if(self){
         _commentKarma = [dictionary objectForKey:@"comment_karma"];
-        _hasMail = [dictionary  objectForKey:@"has_mail"];
-        if(_hasMail == [NSNull null]) _hasMail = @(0);
+        _hasMail = [dictionary  valueForKey:@"has_mail"];
+        if(_hasMail)
+            _hasMail = @(1);
+        else
+            _hasMail = @(0);
         _linkKarma= [dictionary objectForKey:@"link_karma"];
         _name= [dictionary objectForKey:@"name"];
     }
