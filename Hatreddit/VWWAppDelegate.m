@@ -5,6 +5,7 @@
 //  Created by Zakk Hoyt on 4/20/13.
 //  Copyright (c) 2013 Zakk Hoyt. All rights reserved.
 //
+//  https://developer.apple.com/library/mac/#documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLoginItems.html#//apple_ref/doc/uid/10000172i-SW5-BAJJBJEG
 
 #import "VWWAppDelegate.h"
 //#import "VWWUserAboutViewController.h"

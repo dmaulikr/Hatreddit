@@ -300,12 +300,12 @@
 			isa = PBXGroup;
 			children = (
 				C654980B1723B0A900B8756B /* Categories */,
+				C654981D1723B0A900B8756B /* Reachability */,
 				C65498181723B0A900B8756B /* MKNetworkEngine.h */,
 				C65498191723B0A900B8756B /* MKNetworkEngine.m */,
 				C654981A1723B0A900B8756B /* MKNetworkKit.h */,
 				C654981B1723B0A900B8756B /* MKNetworkOperation.h */,
 				C654981C1723B0A900B8756B /* MKNetworkOperation.m */,
-				C654981D1723B0A900B8756B /* Reachability */,
 			);
 			path = MKNetworkKit;
 			sourceTree = "<group>";
